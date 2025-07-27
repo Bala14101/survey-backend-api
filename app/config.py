@@ -6,7 +6,7 @@ from pymongo import MongoClient
 load_dotenv()
 
 # MONGO_URI = MongoClient(os.getenv("MONGO_URI"))
-MONGO_URI = MongoClient(os.getenv("MONGO_URI_PRODUCTION"))
+MONGO_URI = MongoClient(os.getenv("MONGO_URI_PRODUCTION",'mongodb://localhost:27017/'))
 
 DATABASE = MONGO_URI[os.getenv("DATABASE")]
 
